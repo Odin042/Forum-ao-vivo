@@ -11,7 +11,7 @@ import firebase from 'firebase';
 import { auth } from '../services/firebase';
 
 export function Home() {
-   const history = useHistory();
+   //const history = useHistory();
 
    function handleCreateRoom () {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -19,8 +19,9 @@ export function Home() {
     auth.signInWithPopup(provider).then (result => {
       console.log(result);
     })
+  }
    
-
+   
     return (
         <div id ="page-auth">
             <aside>
@@ -48,7 +49,7 @@ export function Home() {
              </main>
         </div>
     
-    )
+    );
 }
-}
+
 
