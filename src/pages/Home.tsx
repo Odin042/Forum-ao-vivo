@@ -2,14 +2,12 @@ import { useHistory } from 'react-router-dom';
 import { useContext } from 'react';
 
 import illustrationImg from '../assents/Illustration.svg';
-import logoImg from '../assents/Logo.svg'
+import logoImg from '../assents/logo.svg'
 import googleIconImg from '../assents/google-icon.png';
 
 
 import '../styles/auth.scss'
 import { Button } from '../componets/Button';
-import firebase from 'firebase';
-import { auth } from '../services/firebase';
 import { AuthContext } from './../App';
 
 
@@ -17,8 +15,12 @@ export function Home() {
    const history = useHistory();
    const{ user, signInWithGoogle } = useContext(AuthContext)
 
-   function handleCreateRoom () {
-     history.push('/rooms/new');
+   async function handleCreateRoom () {
+    if(!user){ //Se  o usuario nao estiver logado, chama da função signInWithGoogle() para forçar o login
+      await signInWithGoogle()
+    }
+   
+     history.push('/rooms/new'); // Direciona o usuario após o login
   
   }
    
@@ -27,7 +29,7 @@ export function Home() {
         <div id ="page-auth">
             <aside>
                <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" /> 
-               <strong>Crie salas e responda seu publico AO VIVO </strong>
+               <strong>Crie salas e responda seu publico AO VIVO </strong> 
                <p>Crie uma grande rede de pergutas e respostas</p>
             </aside>
             <main>
@@ -37,12 +39,12 @@ export function Home() {
                   <img src={googleIconImg} alt="Botão para criar conta com o google" />
                 </button>
                 <div className="separator">ou entre em uma sala</div>
-                <form>
+                <form> */ Cria o campo para entrar com o numero da sala */ 
                     <input 
                     type="text"
                     placeholder="Digite o codigo da sala"
                     />
-                    <Button type="submit">
+                    <Button type="submit"> */ Botão que envia o os dados, ou seja, realiza o "submit"
                         Entrar na sala
                     </Button>
                 </form>
