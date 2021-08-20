@@ -39,12 +39,12 @@ export function Home() {
                   <img src={googleIconImg} alt="Botão para criar conta com o google" />
                 </button>
                 <div className="separator">ou entre em uma sala</div>
-                <form> */ Cria o campo para entrar com o numero da sala */ 
+                <form> 
                     <input 
                     type="text"
                     placeholder="Digite o codigo da sala"
                     />
-                    <Button type="submit"> */ Botão que envia o os dados, ou seja, realiza o "submit"
+                    <Button type="submit"> 
                         Entrar na sala
                     </Button>
                 </form>
