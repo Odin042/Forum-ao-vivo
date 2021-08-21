@@ -1,5 +1,5 @@
 import { useHistory } from 'react-router-dom';
-import { useContext } from 'react';
+
 
 import illustrationImg from '../assents/Illustration.svg';
 import logoImg from '../assents/logo.svg'
@@ -8,12 +8,12 @@ import googleIconImg from '../assents/google-icon.png';
 
 import '../styles/auth.scss'
 import { Button } from '../componets/Button';
-import { AuthContext } from './../contexts/AuthContext';
+import { useAuth } from '../hooks/useAuth';
 
 
 export function Home() {
    const history = useHistory();
-   const{ user, signInWithGoogle } = useContext(AuthContext)
+   const{ user, signInWithGoogle } = useAuth()
 
    async function handleCreateRoom () {
     if(!user){ //Se  o usuario nao estiver logado, chama da função signInWithGoogle() para forçar o login
