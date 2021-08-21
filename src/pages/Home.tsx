@@ -8,7 +8,7 @@ import googleIconImg from '../assents/google-icon.png';
 
 import '../styles/auth.scss'
 import { Button } from '../componets/Button';
-import { AuthContext } from './../App';
+import { AuthContext } from './../contexts/AuthContext';
 
 
 export function Home() {
