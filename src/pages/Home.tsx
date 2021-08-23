@@ -14,6 +14,7 @@ import { useAuth } from '../hooks/useAuth';
 export function Home() {
    const history = useHistory();
    const{ user, signInWithGoogle } = useAuth()
+   const [ roomCode, setRoomCode] = useState('');
 
    async function handleCreateRoom () {
     if(!user){ //Se  o usuario nao estiver logado, chama da função signInWithGoogle() para forçar o login
@@ -23,7 +24,15 @@ export function Home() {
      history.push('/rooms/new'); // Direciona o usuario após o login
   
   }
-   
+
+   async function handleJoinRoom(event: FormEvent) {
+     event.preventDefault();
+
+     if(roomCode.trim === '') {
+       return;
+   }
+
+  }
    
     return (
         <div id ="page-auth">
@@ -43,6 +52,8 @@ export function Home() {
                     <input 
                     type="text"
                     placeholder="Digite o codigo da sala"
+                    onChange={event => setRoomCode(event.target.value)}
+                    value={roomCode}
                     />
                     <Button type="submit"> 
                         Entrar na sala
