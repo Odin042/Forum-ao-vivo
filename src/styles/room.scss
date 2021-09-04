@@ -13,7 +13,22 @@
          img{
              max-height: 45px;
          }
-       }
+
+         > div {
+           display: flex;
+           gap: 16px;
+
+           button {
+             height: 40px;
+            
+             }
+
+             .button:hover {
+               background: #835AFD;
+               color:#fff
+             }
+           }
+         }
     }
     main {
         max-width: 800px;
