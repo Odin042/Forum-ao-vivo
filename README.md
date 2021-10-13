@@ -2,18 +2,18 @@
     <h1>FORUM AO VIVO</h1>
 </div>
 
-<p align = "center">
-   <img src = "https://cdn-icons.flaticon.com/png/512/1183/premium/1183672.png?token=exp=1634152728~hmac=e19c864645706ea6852f0c161e52a58b" />
+<p align = "center" width = "100">
+   <img width="400" height="400" src = "https://cdn-icons.flaticon.com/png/512/1183/premium/1183672.png?token=exp=1634152728~hmac=e19c864645706ea6852f0c161e52a58b" />
 </p>
 
 <div align="center">
     <img src="https://i.imgur.com/xpzHM70.png"</img> 
 </div>
-=========================================================================================
+=================================================================================
 <p>
 Esse projeto foi realizado com intuito do estudar de REACTJS.
 
-:computer: Tecnologias:
+ Tecnologias :computer::
 
  - Typescript
  - JSX
