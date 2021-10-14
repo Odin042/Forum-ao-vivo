@@ -11,7 +11,7 @@
 </div>
 =================================================================================
 <p>
-Esse projeto foi realizado com intuito do estudar de REACTJS.
+Esse projeto foi realizado com intuito de estudar REACTJS.
 
  Tecnologias :computer::
 
